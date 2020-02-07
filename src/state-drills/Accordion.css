@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 25px;
+}
+
+.Accordion {
+    list-style-type: none;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Accordion_item {
+    width: 32%;
+}
+
+.Accordion_item button {
+    background-color: #222;
+    color: white;
+    outline: none;
+    width: 100%;
+    font-size: 2em;
+    padding: 20px;
+    font-family: Roboto;
+    font-weight: 700;
+}
+
+.Accordion_item p {
+    color: #333;
+    border-left: solid 1px #aaa;
+    border-right: solid 1px #aaa;
+    border-bottom: solid 1px #aaa;
+    padding: 10px 25px;
+}
+

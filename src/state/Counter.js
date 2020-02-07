@@ -1,6 +1,7 @@
 import React from 'react';
 
 class Counter extends React.Component {
+  // constructs the object at that instance
     constructor(props) {
         console.log('props in constructor', props)
         super(props)

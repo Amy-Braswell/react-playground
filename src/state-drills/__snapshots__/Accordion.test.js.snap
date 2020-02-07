@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Messages component only opens the last section when multiple sections are clicked 1`] = `
+<ul
+  className="Accordion"
+>
+  <li
+    className="Accordion_item"
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Section 1
+    </button>
+  </li>
+  <li
+    className="Accordion_item"
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Section 2
+    </button>
+  </li>
+  <li
+    className="Accordion_item"
+    key="2"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Section 3
+    </button>
+    <p>
+      Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?
+    </p>
+  </li>
+</ul>
+`;
+
+exports[`Messages component opens a clicked section 1`] = `
+<ul
+  className="Accordion"
+>
+  <li
+    className="Accordion_item"
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Section 1
+    </button>
+  </li>
+  <li
+    className="Accordion_item"
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Section 2
+    </button>
+    <p>
+      Cupiditate tenetur aliquam necessitatibus id distinctio quas nihil ipsam nisi modi!
+    </p>
+  </li>
+  <li
+    className="Accordion_item"
+    key="2"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Section 3
+    </button>
+  </li>
+</ul>
+`;
+
+exports[`Messages component renders empty given no buttons are clicked 1`] = `
+<ul
+  className="Accordion"
+/>
+`;
+
+exports[`Messages component renders no active sections by default 1`] = `
+<ul
+  className="Accordion"
+>
+  <li
+    className="Accordion_item"
+    key="0"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Section 1
+    </button>
+  </li>
+  <li
+    className="Accordion_item"
+    key="1"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Section 2
+    </button>
+  </li>
+  <li
+    className="Accordion_item"
+    key="2"
+  >
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Section 3
+    </button>
+  </li>
+</ul>
+`;
