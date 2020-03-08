@@ -5,7 +5,12 @@ import React from 'react'
 // so it can be directly imported into any other file
 
 const LanguageContext = React.createContext({
-    lang: window.navigator.language
+    lang: window.navigator.language,
+    // Can't use this.setState here because this isn't a component!
+    // We have no ability to update the language but the shape is there
+    setLang:() => {
+
+    }
 })
 
 export default LanguageContext
