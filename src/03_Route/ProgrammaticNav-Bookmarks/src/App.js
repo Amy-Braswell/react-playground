@@ -5,6 +5,7 @@ import BookmarkList from './BookmarkList/BookmarkList';
 import Nav from './Nav/Nav';
 import config from './config';
 import './App.css';
+import BookmarksContext from './BookmarksContext';
 
 const bookmarks = [
   // {
@@ -32,8 +33,8 @@ const bookmarks = [
 
 class App extends Component {
   state = {
-    bookmarks,
-    error: null,
+    bookmarks: [],
+    error: null
   };
 
   setBookmarks = bookmarks => {
@@ -47,6 +48,17 @@ class App extends Component {
     this.setState({
       bookmarks: [ ...this.state.bookmarks, bookmark ],
     })
+  }
+
+  deleteBookmark = bookmarkId => {
+    console.log(bookmarkId)
+    // todo: remove bookmark with bookmarkId from state
+    const newBookmarks = this.state.bookmarks.filter(bm =>
+      bm.id !==bookmarkId
+      )
+      this.setState({
+        bookmarks: newBookmarks
+      })
   }
 
   componentDidMount() {
@@ -68,32 +80,40 @@ class App extends Component {
   }
 
   render() {
-    const { bookmarks } = this.state
+    const contextValue = {
+      bookmarks: this.state.bookmarks,
+      addBookmark: this.addBookmark,
+      //this overrides the empty deleteBookmark function that is in the BookmarksContext.js
+      deleteBookmark: this.deleteBookmark
+    }
     return (
       <main className='App'>
         <h1>Bookmarks!</h1>
-        <Nav />
-        <div className='content' aria-live='polite'>
+
+        <BookmarksContext.Provider 
+          value={contextValue}
+        >
+          <Nav />
+          <div className='content' aria-live='polite'>
+            
           <Route
             path='/add-bookmark'
-            render={({history}) => {
-              return <AddBookmark
-                onAddBookmark={this.addBookmark}
-                onClickCancel={() => history.push('/')}
-              />
-            }}
+            component={AddBookmark}
           />
+
           <Route 
             exact
             path='/'
             render={({ history }) => {
               return <BookmarkList 
                 bookmarks={bookmarks} 
+                component={BookmarkList}
               />
             }}
           />
 
         </div>
+        </BookmarksContext.Provider>
       </main>
     );
   }
