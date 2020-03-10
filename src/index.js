@@ -1,24 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import AppLang from './04_Context/AppLang.js'
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import RegistrationForm from './04_Context/registrationForm/registrationForm'
 
-
-ReactDOM.render(
-    <AppLang />,
-document.getElementById('root')
-);
+ReactDOM.render(<RegistrationForm />, document.getElementById('root'));
 
 
 
 
+// FOR LANGUAGE BUTTON APP / CONTEXT DRILL
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+// import './index.css';
+// import AppLang from './04_Context/AppLang.js'
 
 
+// ReactDOM.render(
+//     <AppLang />,
+// document.getElementById('root')
+// );
 
-
-
-
-
+// FOR REACT ROUTER DRILLS
 // import React from 'react'
 // import ReactDOM from 'react-dom'
 // import { BrowserRouter } from 'react-router-dom'

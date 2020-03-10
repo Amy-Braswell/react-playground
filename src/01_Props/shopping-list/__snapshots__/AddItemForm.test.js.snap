@@ -8,10 +8,10 @@ exports[`AddItemForm component renders the complete form 1`] = `
     aria-label="Shopping list item"
     name="itemToAdd"
     placeholder="carrots"
-    type="text"
+    type='text'
   />
   <button
-    type="submit"
+    type='submi'
   >
     Add Item
   </button>
